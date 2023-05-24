@@ -29,6 +29,7 @@ describe('template spec', () => {
     .siblings('td')
     .get('button[data-cy="delete-btn"]')
     .last()
+    .click()
     
    
   })
