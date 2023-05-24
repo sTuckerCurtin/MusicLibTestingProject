@@ -12,12 +12,24 @@
 //   })
 // })
 
+// describe('template spec', () => {
+//   it('passes', () => {
+//     cy.visit('http://localhost:3000/')
+//     cy.get('input[data-cy="search-bar"]')
+//     .type("Lolipop")
+//     .wait(500)
+   
+//   })
+// })
 describe('template spec', () => {
   it('passes', () => {
     cy.visit('http://localhost:3000/')
-    cy.get('input[data-cy="search-bar"]')
-    .type("Lolipop")
-    .wait(500)
+    cy.get('table')
+    .contains('td', 'Lolipop')
+    .siblings('td')
+    .get('button[data-cy="delete-btn"]')
+    .last()
+    
    
   })
 })
