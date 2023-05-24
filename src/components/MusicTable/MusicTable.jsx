@@ -60,7 +60,7 @@ const MusicTable = (props) => {
                   <td>{song.genre}</td>
                   <td>{song.release_date}</td>
                   <td>{calculateMinutes(song.running_time).toFixed(2)}</td>
-                  <td><button onClick={() => deleteSong(song.id)} type="submit">
+                  <td><button data-cy="delete-btn" onClick={() => deleteSong(song.id)} type="submit">
                     Delete Song
                   </button></td>
                   <td><button type="button" onClick={() => handleEdit(song)}>
