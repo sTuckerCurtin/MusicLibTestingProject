@@ -32,17 +32,17 @@ const EditSong = ({ handleClose, show, props }) => {
       <form onSubmit={handleSubmit}>
                 <h1>Edit Song</h1>
                 <label>Title</label>
-                <input name="title" onChange={(e)=>setTitle(e.target.value)} defaultValue={props.title}/>
+                <input data-cy="title-edit" name="title" onChange={(e)=>setTitle(e.target.value)} defaultValue={props.title}/>
                 <label>Artist</label>
-                <input name="artist" onChange={(e)=>setArtist(e.target.value)} defaultValue={props.artist}/>
+                <input data-cy="artist-edit" name="artist" onChange={(e)=>setArtist(e.target.value)} defaultValue={props.artist}/>
                 <label>Album</label>
-                <input name="album" onChange={(e)=>setAlbum(e.target.value)} defaultValue={props.album}/>
+                <input data-cy="album-edit" name="album" onChange={(e)=>setAlbum(e.target.value)} defaultValue={props.album}/>
                 <label>Genre</label>
-                <input name="genre" onChange={(e)=>setGenre(e.target.value)} defaultValue={props.genre}/>
+                <input data-cy="genre-edit" name="genre" onChange={(e)=>setGenre(e.target.value)} defaultValue={props.genre}/>
                 <label>Release Date</label>
-                <input type="date" name="release_date" onChange={(e)=>setRelease(e.target.value)} defaultValue={props.release_date}/>
+                <input data-cy="rd-edit" type="date" name="release_date" onChange={(e)=>setRelease(e.target.value)} defaultValue={props.release_date}/>
                 <label>Running Time</label>
-                <input name="running_time" onChange={(e)=>setRunningTime(e.target.value)} defaultValue={props.running_time} />
+                <input data-cy="rt-edit" name="running_time" onChange={(e)=>setRunningTime(e.target.value)} defaultValue={props.running_time} />
                 <button type="submit">Update Song</button>
             </form>
         <button type="button" onClick={handleClose}>
